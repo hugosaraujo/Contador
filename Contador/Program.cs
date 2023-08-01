@@ -12,6 +12,6 @@ foreach (int numeros in listaDeInteiros)
 {
     if (numeros % 2 == 0)
     {
-        Console.WriteLine(numeros);
+        Console.Write(numeros);
     }
 }
