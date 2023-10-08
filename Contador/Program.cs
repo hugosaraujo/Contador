@@ -1,12 +1,13 @@
-﻿List<int> numeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-foreach (int numero in numeros)
+﻿//List<int> numeros = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+List<int> numeros = new();
+for (int i = 0; i <= 10; i++)
 {
-    if (numero % 2 != 0)
-    {
-        Console.Write($"{numero} ");
-    }
+    numeros.Add(i);
 }
+
+List<int> numerosPares = numeros.FindAll(numero => numero % 2 == 0);
+numerosPares.ForEach(numero => Console.Write($"{numero} "));
+
 
 //contagem feita com for
 List<int> listaDeNumeros = new List<int>();
@@ -18,7 +19,8 @@ for (int numero = 0; numero < 11; numero++)
     {
         if (i % 2 != 0)
         {
-            Console.WriteLine(listaDeNumeros[numero]);
+            Console.WriteLine();
+            Console.Write(listaDeNumeros[numero]);
         }
     }
 }
